@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KYZ-Ga-fHK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vQH-6G-IMg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home Feed Table View Controller-->
         <scene sceneID="5dQ-bO-vC9">
             <objects>
                 <tableViewController id="nVB-Eg-u1N" customClass="HomeFeedTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="236" sectionHeaderHeight="22" sectionFooterHeight="22" id="7cd-1J-53D">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="217" sectionHeaderHeight="22" sectionFooterHeight="22" id="7cd-1J-53D">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="236" id="9wL-z3-O1d" customClass="MainFeedTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="217" id="9wL-z3-O1d" customClass="MainFeedTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9wL-z3-O1d" id="41g-ZK-z1L">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kp9-z9-u6p" customClass="PFImageView">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <animations/>
                                             <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="0.0" y="8" width="400" height="236"/>
+                                                <rect key="frame" x="104" y="16" width="192" height="183"/>
                                             </variation>
                                         </imageView>
                                     </subviews>
+                                    <animations/>
                                     <variation key="default">
                                         <mask key="subviews">
                                             <exclude reference="Kp9-z9-u6p"/>
@@ -36,6 +39,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <animations/>
                                 <connections>
                                     <outlet property="donkey" destination="Kp9-z9-u6p" id="xRk-Og-Jtv"/>
                                     <outlet property="imageView" destination="Kp9-z9-u6p" id="Naj-rB-cL7"/>
@@ -49,37 +53,39 @@
                             <outlet property="delegate" destination="nVB-Eg-u1N" id="VUL-jp-hcc"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="VCl-Dw-izP"/>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="sxo-IA-XK5">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Apd-sL-xzs">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="6Ob-yO-bp5">
                             <connections>
-                                <action selector="selectPhoto:" destination="nVB-Eg-u1N" id="QyG-lj-cU6"/>
+                                <action selector="selectPhoto:" destination="nVB-Eg-u1N" id="dFm-zK-0kV"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFf-VA-A3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5059.5" y="966"/>
+            <point key="canvasLocation" x="5977.5" y="966"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="8Av-La-QDi">
+        <!--Item-->
+        <scene sceneID="yUJ-F7-ocQ">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KYZ-Ga-fHK" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vQH-6G-IMg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="VCl-Dw-izP"/>
                     <toolbarItems/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="UHh-kz-4Bw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sz7-pg-3gM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="nVB-Eg-u1N" kind="relationship" relationship="viewControllers" id="d2j-cq-crF"/>
+                        <segue destination="nVB-Eg-u1N" kind="relationship" relationship="rootViewController" id="Wf8-20-GJI"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qjn-6O-U9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f97-w5-jb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4141.5" y="966"/>
+            <point key="canvasLocation" x="5059.5" y="966"/>
         </scene>
     </scenes>
 </document>

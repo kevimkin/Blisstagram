@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A8C82DE1B27D7A700C659AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A8C82DD1B27D7A700C659AB /* Info.plist */; };
 		9AE1353E1B26B0D500341E42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE1353D1B26B0D500341E42 /* main.m */; };
 		9AE135411B26B0D500341E42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE135401B26B0D500341E42 /* AppDelegate.m */; };
 		9AE135471B26B0D500341E42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE135451B26B0D500341E42 /* Main.storyboard */; };
@@ -106,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C32977B1B27DE0900A3AD37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A8C82DD1B27D7A700C659AB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		9AE1352F1B26B0D500341E42 = {
 			isa = PBXGroup;
 			children = (
@@ -154,8 +161,8 @@
 		9AE135541B26B0D500341E42 /* BlisstagramTests */ = {
 			isa = PBXGroup;
 			children = (
+				7C32977B1B27DE0900A3AD37 /* Supporting Files */,
 				9AE135571B26B0D500341E42 /* BlisstagramTests.m */,
-				9A8C82DD1B27D7A700C659AB /* Info.plist */,
 			);
 			path = BlisstagramTests;
 			sourceTree = "<group>";
@@ -271,7 +278,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A8C82DE1B27D7A700C659AB /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
