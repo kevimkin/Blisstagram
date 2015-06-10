@@ -10,4 +10,8 @@
 
 @interface MainFeedTableViewCell : PFTableViewCell
 
+
+@property (weak, nonatomic) IBOutlet PFImageView *myImageView;
+
+
 @end
